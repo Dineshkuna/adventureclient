@@ -50,12 +50,12 @@ const Footer = () => {
           <div className="col-md-3">
             <h5 className="fw-bold">Contact</h5>
             <p className="text-muted mb-1"><strong>Address:</strong> Kphb, Hyderabad</p>
-            <p className="text-muted mb-1 text-break"><strong>Email:</strong> <a href="mailto:ramireddylavanya2609@gmail.com" className="text-muted text-decoration-none">ramireddylavanya2609@gmail.com</a></p>
-            <p className="text-muted"><strong>Phone:</strong> +91 8121741676</p>
+            <p className="text-muted mb-1 text-break"><strong>Email:</strong> <a href="mailto:ramireddylavanya2609@gmail.com" className="text-muted text-decoration-none">dineshkuna134@gmail.com</a></p>
+            <p className="text-muted"><strong>Phone:</strong> +91 8688545402</p>
           </div>
         </div>
         <div className="text-center pt-3 border-top mt-3">
-          <p className="text-muted mb-0">Copyright 2024, Lavanya and developed by Ramireddy Lavanya. All rights reserved.</p>
+          <p className="text-muted mb-0">Copyright 2024, Dinesh and developed by Kuna Dinesh. All rights reserved.</p>
         </div>
       </div>
     </footer>
