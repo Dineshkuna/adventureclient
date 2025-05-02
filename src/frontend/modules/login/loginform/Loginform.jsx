@@ -27,7 +27,7 @@ const Loginform = ({ setUser }) => {
      
       // const res = await axios.post('http://localhost:5000/api/authLogin/login', formData);
       const BASE_URL="https://adventureserver.onrender.com";
-      const res = await axios.GET(`${BASE_URL}/api/authLogin/login`, formData)
+      const res = await axios.POST(`${BASE_URL}/api/authLogin/login`, formData)
       console.log("Response from Backend:", res.data); 
       
       const { token, name } = res.data; 
