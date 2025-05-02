@@ -21,50 +21,30 @@ const Loginform = ({ setUser }) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // const onSubmit = async (e) => {
-  //   e.preventDefault();
-  //   try {
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    try {
      
-  //     // const res = await axios.post('http://localhost:5000/api/authLogin/login', formData);
-  //     const BASE_URL="https://adventureserver.onrender.com";
-  //     const res = await axios.POST(`${BASE_URL}/api/authLogin/login`, formData)
-  //     console.log("Response from Backend:", res.data); 
+      // const res = await axios.post('http://localhost:5000/api/authLogin/login', formData);
+      const BASE_URL="https://adventureserver.onrender.com";
+      const res = await axios.post(`${BASE_URL}/api/authLogin/login`, formData)
+      console.log("Response from Backend:", res.data); 
       
-  //     const { token, name } = res.data; 
+      const { token, name } = res.data; 
   
-  //     if (token && name) {
-  //       localStorage.setItem('user', JSON.stringify({ token, name })); 
-  //       setUser({ token, name }); 
+      if (token && name) {
+        localStorage.setItem('user', JSON.stringify({ token, name })); 
+        setUser({ token, name }); 
 
-  //       navigate('/'); 
-  //     } else {
-  //       console.error('Invalid response: Token or name not found');
-  //     }
-  //   } catch (err) {
-  //     console.error('Login failed:', err.response ? err.response.data : err.message);
-  //   }
-  // };
-
-const onSubmit = async (e) => {
-  e.preventDefault();
-  try {
-    const BASE_URL = "https://adventureserver.onrender.com";
-    const res = await axios.post(`${BASE_URL}/api/authLogin/login`, formData);
-    console.log("Response from Backend:", res.data); 
-    
-    const { token, name } = res.data; 
-
-    if (token && name) {
-      localStorage.setItem('user', JSON.stringify({ token, name })); 
-      setUser({ token, name }); 
-      navigate('/'); 
-    } else {
-      console.error('Invalid response: Token or name not found');
+        navigate('/'); 
+      } else {
+        console.error('Invalid response: Token or name not found');
+      }
+    } catch (err) {
+      console.error('Login failed:', err.response ? err.response.data : err.message);
     }
-  } catch (err) {
-    console.error('Login failed:', err.response ? err.response.data : err.message);
-  }
-};
+  };
+
 
 
   return (
